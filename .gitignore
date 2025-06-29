@@ -1,5 +1,6 @@
 # Скрипт отправки постов (не публикуем в GitHub)
 post_to_telegram.sh
+preview_post.sh
 
 # telegram bot keys
 .env
