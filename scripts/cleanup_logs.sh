@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# === Настройки ===
+# === Settings ===
 LOG_DIRS=(
     "/opt/projects/log-o-matic/logs"
     "/opt/projects/buttonator/logs"
@@ -12,9 +12,9 @@ DAYS_TO_KEEP=7
 # Telegram
 BOT_TOKEN="your_bot_token_here"
 CHAT_ID="your_chat_id_here"
-SERVER_IP="192.168.1.30"
+SERVER_IP="192.168.1.250"
 
-# === Удаление логов ===
+# === Delete logs ===
 DELETED_FILES=""
 
 for DIR in "${LOG_DIRS[@]}"; do
@@ -29,7 +29,7 @@ for DIR in "${LOG_DIRS[@]}"; do
     fi
 done
 
-# === Telegram уведомление ===
+# === Telegram notifications ===
 if [ -n "$DELETED_FILES" ]; then
     MESSAGE="🧹 Log cleanup on $SERVER_IP: Removed logs older than $DAYS_TO_KEEP days:\n$DELETED_FILES"
     curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \

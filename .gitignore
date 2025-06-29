@@ -1,6 +1,13 @@
 # Скрипт отправки постов (не публикуем в GitHub)
 post_to_telegram.sh
 
+# telegram bot keys
+.env
+
+# posts templates
+templates/*.html 
+
+
 # Файл с HTML-постом (можно оставить, если хочешь локальные черновики)
 post.html
 
