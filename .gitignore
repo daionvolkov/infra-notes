@@ -2,6 +2,7 @@
 post_to_telegram.sh
 preview_post.sh
 publication_plan.json
+send_photo.sh
 
 # telegram bot keys
 .env
