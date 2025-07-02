@@ -1,0 +1,14 @@
+global:
+  scrape_interval: 15s       # Number of days to keep backups
+  evaluation_interval: 15s   # Rule evaluation interval
+
+scrape_configs:
+  # Monitoring of Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Example of monitoring Node Exporter 
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['node_exporter_host:9100']
